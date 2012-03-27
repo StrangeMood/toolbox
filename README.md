@@ -68,6 +68,8 @@ Result will be
 
 ##Installation:
 
+Add to your Gemfile:
+
 	git "git://github.com/StrangeMood/toolbox.git" do
 	  gem "decorator"
 	end
