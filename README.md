@@ -26,42 +26,45 @@ Nifty tool for decorating any onject with module.
       "Decorated foo (#{super})"
     end
   end
+```
 
-  # instance decorating
+Decorating instance of class
+```ruby
   foo = Foo.new('Local variable')
   foo = foo.decorate(FooDecorator)
-
   puts foo.some_method_undecorated
   puts foo.some_method
   puts foo.name
+```
 
-  puts
+```
+  Foo#some_method
+  Decorated foo (Foo#some_method)
+  Local variable
+```
 
-  # class decorating
+Decorating class itself
+```ruby
   foo = Foo.decorate(FooDecorator).new('Local variable')
   puts foo.some_method_undecorated
   puts foo.some_method
   puts foo.name
+```
 
-  puts
+```
+  Foo#some_method
+  Decorated foo (Foo#some_method)
+  Local variable
+```
 
-  # undecorating
+Undecorating
+```ruby
   bar = foo.undecorate
   puts bar.some_method
   puts bar.name
 ```
 
-Result will be
-
 ```
-  Foo#some_method
-  Decorated foo (Foo#some_method)
-  Local variable
-
-  Foo#some_method
-  Decorated foo (Foo#some_method)
-  Local variable
-
   Local variable
   Foo#some_method
 ```
