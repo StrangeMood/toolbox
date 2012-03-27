@@ -1,6 +1,6 @@
 ##decorator
 
-Nifty tool for decarating any onject with module.
+Nifty tool for decorating any onject with module.
 
 ##Installation:
 
