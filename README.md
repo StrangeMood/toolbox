@@ -29,6 +29,7 @@ Nifty tool for decorating any onject with module.
 ```
 
 Decorating instance of class
+
 ```ruby
   foo = Foo.new('Local variable')
   foo = foo.decorate(FooDecorator)
@@ -44,6 +45,7 @@ Decorating instance of class
 ```
 
 Decorating class itself
+
 ```ruby
   foo = Foo.decorate(FooDecorator).new('Local variable')
   puts foo.some_method_undecorated
@@ -58,6 +60,7 @@ Decorating class itself
 ```
 
 Undecorating
+
 ```ruby
   bar = foo.undecorate
   puts bar.some_method
